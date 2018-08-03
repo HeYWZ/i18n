@@ -1,0 +1,13 @@
+$(document).ready(function(){
+    $("#language").click(function(){
+        if($("#language").val()=="cn"){
+            $.getJSON("cn.json",function(data){
+                $("#two").text((data[0].txt));
+            })
+        }else{
+            $.getJSON("en.json",function(data){
+                $("#two").text((data[0].txt));
+            })
+        }
+    })
+});
